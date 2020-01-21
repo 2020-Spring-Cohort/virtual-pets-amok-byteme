@@ -51,4 +51,12 @@ public class Cat {
         litterBox -= 10;
     }
 
+    Cat cat1 = new Cat("Ben");
+    Cat Stuart = new Cat("Stuart");
+    Cat Noah = new Cat("Noah");
+    Cat Ernest = new Cat("Ernest");
+    Cat Brian = new Cat("Brian");
+
+
+
 }
