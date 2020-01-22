@@ -51,12 +51,14 @@ public class Cat {
         litterBox -= 10;
     }
 
-    Cat cat1 = new Cat("Ben");
-    Cat Stuart = new Cat("Stuart");
-    Cat Noah = new Cat("Noah");
-    Cat Ernest = new Cat("Ernest");
-    Cat Brian = new Cat("Brian");
-
-
-
+    @Override
+    public String toString() {
+        return "Cat{" +
+                "hunger=" + hunger +
+                ", name='" + name + '\'' +
+                ", boredom=" + boredom +
+                ", health=" + health +
+                ", litterBox=" + litterBox +
+                '}';
+    }
 }
