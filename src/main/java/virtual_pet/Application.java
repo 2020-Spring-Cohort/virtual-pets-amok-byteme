@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Application {
-//    static Scanner input = new Scanner(System.in);
+    static Scanner input = new Scanner(System.in);
     public static void main(String[] args) {
         ArrayList<Cat> catNames = new ArrayList<>();
 

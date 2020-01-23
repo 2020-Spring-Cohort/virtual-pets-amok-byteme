@@ -69,4 +69,32 @@ public class CatTest {
     int result = underTest.litterBox();
     assertEquals(0, result);
 }
+@Test
+    public void timeShouldEffectHunger() {
+    Cat underTest = new Cat ("Ben");
+    underTest.tick();
+    int result = underTest.hunger();
+    assertEquals(11, result);
+}
+@Test
+    public void timeShouldEffectBoredom() {
+    Cat underTest = new Cat ("Ben");
+    underTest.tick();
+    int result = underTest.boredom();
+    assertEquals(11, result);
+}
+@Test
+    public void timeShouldEffectHealth() {
+    Cat underTest = new Cat ("Ben");
+    underTest.tick();
+    int result = underTest.health();
+    assertEquals(9, result);
+}
+@Test
+    public void timeShouldEffectLitterBox () {
+    Cat underTest = new Cat ("Ben");
+    underTest.tick();
+    int result = underTest.litterBox();
+    assertEquals(11, result);
+}
 }
