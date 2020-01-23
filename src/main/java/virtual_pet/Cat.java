@@ -2,6 +2,7 @@ package virtual_pet;
 
 public class Cat {
 
+    public Object getFeedStatus;
     private int hunger;
     private String name;
     private int boredom;
@@ -60,5 +61,8 @@ public class Cat {
                 ", health=" + health +
                 ", litterBox=" + litterBox +
                 '}';
+    }
+
+    public void receiveFood() {
     }
 }

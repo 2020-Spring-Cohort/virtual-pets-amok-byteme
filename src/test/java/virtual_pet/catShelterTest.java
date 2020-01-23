@@ -32,5 +32,8 @@ void setUp(){
     assertTrue(retrievedCats.get(0).getFeedStatus);
 }
 
+    private void assertTrue(Object getFeedStatus) {
+    }
+
 
 }
