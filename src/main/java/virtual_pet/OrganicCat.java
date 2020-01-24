@@ -19,17 +19,15 @@ public class OrganicCat extends Cat{
     public void vetVisit(){
         health += 5;
     }
-
-
     public void cleanLitterBox(){
         litterBox -= 10;
     }
 
     @Override
     public String toString() {
-        return "Cat{" +
-                "hunger=" + hunger +
-                ", name='" + name + '\'' +
+        return "OrganicCat{" +
+                "name=" + name +
+                ", hunger='" + hunger + '\'' +
                 ", boredom=" + boredom +
                 ", health=" + health +
                 ", litterBox=" + litterBox +
