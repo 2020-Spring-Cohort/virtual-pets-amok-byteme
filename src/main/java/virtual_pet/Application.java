@@ -1,12 +1,11 @@
 package virtual_pet;
 
 import java.util.ArrayList;
-import java.util.Scanner;
+//import java.util.Scanner;
 
 public class Application {
-    static Scanner input = new Scanner(System.in);
+//    static Scanner input = new Scanner(System.in);
     public static void main(String[] args) {
-        System.out.println("test");
 
         OrganicCat orgCat1 = new OrganicCat("Ben");
         RoboCat roboCat1 = new RoboCat("Stuart");
@@ -26,6 +25,8 @@ public class Application {
         for (Cat kitty: shelterList.retrievedCatList()){
             System.out.println(kitty);
         }
+
+
 
 
 

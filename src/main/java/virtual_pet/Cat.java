@@ -4,7 +4,7 @@ public class Cat {
 
     public Object getFeedStatus;
     protected String name;
-    protected int boredom;
+    public int boredom;
 
     public Cat(String name) {
         this.name = name;

@@ -19,6 +19,7 @@ public class RoboCat extends Cat {
     public String toString() {
         return "RoboCat{" +
                 "name=" + name +
+                ", boredom=" + boredom +
                 ", maintenance=" + maintenance +
                 ", batteryLife=" + batteryLife +
                 '}';

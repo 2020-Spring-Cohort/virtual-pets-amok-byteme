@@ -7,24 +7,25 @@ public class CatShelter {
 
     private static ArrayList<Cat> catNames = new ArrayList<>();
 
-    public CatShelter () {
+    public CatShelter() {
 
     }
 
-    public void addCat(Cat testCat) {catNames.add(testCat);}
+    public void addCat(Cat testCat) {
+        catNames.add(testCat);
+    }
 
-    public static ArrayList<Cat> retrievedCatList() { return catNames; }
+    public static ArrayList<Cat> retrievedCatList() {
+        return catNames;
+    }
 
     public void feedAllCats() {
-        for (Cat catToBeFed : catNames.get(index)) {
+        for (Cat catToBeFed : catNames) {
             catToBeFed.receiveFood();
         }
     }
+}
 
-
-
-
-    }
 
 
 

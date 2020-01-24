@@ -7,12 +7,14 @@ public class OrganicCat extends Cat{
     public OrganicCat (String name) {
         super(name);
 
-
         this.hunger = 10;
         this.health = 10;
         this.litterBox = 10;
 
     }
+    public int hunger() {return hunger;}
+    public int health() {return health;}
+    public int litterBox() {return litterBox;}
     public void feed() {
         hunger -= 2;
     }
@@ -27,7 +29,7 @@ public class OrganicCat extends Cat{
     public String toString() {
         return "OrganicCat{" +
                 "name=" + name +
-                ", hunger='" + hunger + '\'' +
+                ", hunger=" + hunger +
                 ", boredom=" + boredom +
                 ", health=" + health +
                 ", litterBox=" + litterBox +
@@ -41,4 +43,4 @@ public class OrganicCat extends Cat{
         this.litterBox++;
     }
 
-    }
+}
