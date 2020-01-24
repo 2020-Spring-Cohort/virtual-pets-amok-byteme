@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class CatTest {
 @Test
     public void shouldHaveDefaultHunger() {
-    Cat underTest = new Cat("Ben");
+    OrganicCat underTest = new OrganicCat("Ben");
     
     int result = underTest.hunger ();
     

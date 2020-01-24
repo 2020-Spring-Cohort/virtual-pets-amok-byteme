@@ -7,13 +7,13 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class catShelterTest {
 
-    private catShelter underTest;
+    private CatShelter underTest;
     private Cat testCat;
 
 
 @BeforeEach
 void setUp(){
-    underTest = new catShelter(testCat);
+    underTest = new CatShelter();
     testCat = new Cat ("testCat");
     underTest.addCat(testCat);
 }
