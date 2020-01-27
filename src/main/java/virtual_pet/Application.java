@@ -1,17 +1,20 @@
 package virtual_pet;
 
 import java.util.ArrayList;
-//import java.util.Scanner;
+import java.util.Scanner;
 
 public class Application {
-//    static Scanner input = new Scanner(System.in);
     public static void main(String[] args) {
-
-        OrganicCat orgCat1 = new OrganicCat("Ben");
-        RoboCat roboCat1 = new RoboCat("Stuart");
-        OrganicCat orgCat2 = new OrganicCat("Noah");
-        RoboCat roboCat2 = new RoboCat("Ernest");
-        OrganicCat orgCat3 = new OrganicCat("Brian");
+        System.out.println("Welcome to the cat shelter! We house organic and robotic cats. Would you like to see our cats? (Y/N)");
+        Scanner input = new Scanner(System.in);
+        String userInput1 = input.nextLine();
+        if (userInput1.equals("Y")) {
+            System.out.println("Here is a list of our cats:");
+        OrganicCat orgCat1 = new OrganicCat("Ben", 10);
+        RoboCat roboCat1 = new RoboCat("Stuart", 10);
+        OrganicCat orgCat2 = new OrganicCat("Noah", 10);
+        RoboCat roboCat2 = new RoboCat("Ernest", 10);
+        OrganicCat orgCat3 = new OrganicCat("Brian", 10);
         CatShelter shelter = new CatShelter();
         shelter.addCat(orgCat1);
         shelter.addCat(roboCat1);
@@ -20,19 +23,15 @@ public class Application {
         shelter.addCat(orgCat3);
 
 
-
-        CatShelter shelterList = new CatShelter();
-        for (Cat kitty: shelterList.retrievedCatList()){
-            System.out.println(kitty);
+            for (int i = 0; i < shelter.getCatNames().size(); i++) {
+                Cat someCatFromTheList = shelter.getCatNames().get(i);
+                System.out.println(someCatFromTheList);
+            }
+        }else{
+            System.out.println("Ok. Goodbye.");
+            }
+        }
         }
 
 
-
-
-
-
-
-
-}
-}
 

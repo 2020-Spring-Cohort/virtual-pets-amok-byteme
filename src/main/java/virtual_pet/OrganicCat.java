@@ -4,8 +4,8 @@ public class OrganicCat extends Cat{
     private int hunger;
     private int health;
     private int litterBox;
-    public OrganicCat (String name) {
-        super(name);
+    public OrganicCat (String name, int boredom) {
+        super(name, boredom);
 
         this.hunger = 10;
         this.health = 10;
@@ -25,15 +25,16 @@ public class OrganicCat extends Cat{
         litterBox -= 10;
     }
 
+    public void receiveFood() {
+    }
+
     @Override
     public String toString() {
-        return "OrganicCat{" +
-                "name=" + name +
-                ", hunger=" + hunger +
-                ", boredom=" + boredom +
-                ", health=" + health +
-                ", litterBox=" + litterBox +
-                '}';
+        return "name= " + name +
+                ", hunger= " + hunger +
+                ", boredom= " + boredom +
+                ", health= " + health +
+                ", litterBox= " + litterBox;
     }
 
 

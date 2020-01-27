@@ -5,7 +5,7 @@ import java.util.HashMap;
 
 public class CatShelter {
 
-    private static ArrayList<Cat> catNames = new ArrayList<>();
+    protected static ArrayList<Cat> catNames = new ArrayList<>();
 
     public CatShelter() {
 
@@ -15,7 +15,7 @@ public class CatShelter {
         catNames.add(testCat);
     }
 
-    public static ArrayList<Cat> retrievedCatList() {
+    public static ArrayList<Cat> getCatNames() {
         return catNames;
     }
 

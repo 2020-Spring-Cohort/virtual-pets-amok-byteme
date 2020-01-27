@@ -8,8 +8,12 @@ public class Cat {
 
     public Cat(String name) {
         this.name = name;
-        this.boredom = 10;
+        this.boredom = boredom;
+    }
 
+    public Cat(String name, int boredom) {
+        this.name = name;
+        this.boredom = boredom;
     }
 
     public String getName() {
@@ -23,12 +27,13 @@ public class Cat {
         boredom -= 2;
     }
 
-    public void receiveFood() {
-    }
+
 
     public void tick() {
         this.boredom++;
     }
 
+    public void receiveFood() {
+    }
 }
 
