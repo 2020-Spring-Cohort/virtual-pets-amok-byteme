@@ -32,6 +32,13 @@ void setUp(){
     assertTrue(retrievedCats.get(0).getFeedStatus);
 }
 
+@Test
+public void shouldAdoptCat(){
+   underTest.adoptCat(testCat);
+   ArrayList<Cat> retrievedCatList = underTest.retrievedCatList();
+   assertTrue(retrievedCatList.remove(testCat));
+}
+
     private void assertTrue(Object getFeedStatus) {
     }
 

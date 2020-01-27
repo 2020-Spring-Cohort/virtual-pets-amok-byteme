@@ -1,11 +1,11 @@
 package virtual_pet;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 
 public class CatShelter {
 
     protected static ArrayList<Cat> catNames = new ArrayList<>();
+    protected static ArrayList<Cat> adoptedCats = new ArrayList<>();
 
     public CatShelter() {
 
@@ -24,6 +24,18 @@ public class CatShelter {
             catToBeFed.receiveFood();
         }
     }
+        public ArrayList<Cat> getAdoptedCats(){
+        return adoptedCats;
+        }
+    public void adoptCat(Cat testCat) {
+       catNames.remove(testCat);
+       adoptedCats.add(testCat);
+    }
+
+    public ArrayList<Cat> retrievedCatList() {
+    return catNames;
+    }
+
 }
 
 

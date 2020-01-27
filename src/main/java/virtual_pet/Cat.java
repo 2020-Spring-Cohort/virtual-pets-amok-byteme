@@ -35,5 +35,17 @@ public class Cat {
 
     public void receiveFood() {
     }
+
+    public selectCat(name){
+
+    }
+
+    @Override
+    public String toString() {
+        return "Cat{" +
+                "name='" + name + '\'' +
+                ", boredom=" + boredom +
+                '}';
+    }
 }
 
