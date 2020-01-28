@@ -1,6 +1,5 @@
 package virtual_pet;
 
-import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Application {
@@ -10,7 +9,6 @@ public class Application {
         Scanner input = new Scanner(System.in);
         String userInput1 = input.nextLine();
         if (userInput1.equals("Y")) {
-            while (x == 1) {
                 System.out.println("Here is a list of our cats:");
                 OrganicCat orgCat1 = new OrganicCat("Ben", 10);
                 OrganicCat orgCat2 = new OrganicCat("Noah", 10);
@@ -29,6 +27,7 @@ public class Application {
                     Cat someCatFromTheList = shelter.getCatNames().get(name);
                     System.out.println(someCatFromTheList);
                 }
+            while (x == 1) {
                 System.out.println("Would you like to interact with all cats or a single cat?[A/S]");
                 String userInput2 = input.nextLine();
                 if (userInput2.equals("A")) {
@@ -74,7 +73,7 @@ public class Application {
                     } else if (userInputAction.equals("shoot all laser beams")) {
                         shelter.shootAllLaserBeams();
                     }
-                    
+
                 } else if (userInput2.equals("S")) {
                     System.out.println("Which cat would you like to interact with?");
                     String userInputCat = input.nextLine();
