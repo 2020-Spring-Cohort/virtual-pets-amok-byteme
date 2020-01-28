@@ -13,6 +13,7 @@ public class RoboCat extends Cat {
 
     public void repair() {maintenance += 2;}
     public void recharge() {batteryLife += 5;}
+    public void laserBeam(){ System.out.println("Zap!"); }
 
     @Override
     public String toString() {
