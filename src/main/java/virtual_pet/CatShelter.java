@@ -1,39 +1,40 @@
 package virtual_pet;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class CatShelter {
 
-    protected static ArrayList<Cat> catNames = new ArrayList<>();
-    protected static ArrayList<Cat> adoptedCats = new ArrayList<>();
+private HashMap<String, Cat> catNames = new HashMap<>();
+
 
     public CatShelter() {
 
     }
 
     public void addCat(Cat testCat) {
-        catNames.add(testCat);
+        catNames.put(testCat.getName(), testCat);
     }
 
-    public static ArrayList<Cat> getCatNames() {
+    public HashMap<String, Cat> getCatNames() {
         return catNames;
     }
 
     public void feedAllCats() {
-        for (Cat catToBeFed : catNames) {
-            catToBeFed.receiveFood();
+        for (Cat catToBeFed : catNames.values()) {
+            if(catToBeFed instanceof OrganicCat){
+                ((OrganicCat) catToBeFed).feed();
+            }
         }
-    }
-        public ArrayList<Cat> getAdoptedCats(){
-        return adoptedCats;
-        }
-    public void adoptCat(Cat testCat) {
-       catNames.remove(testCat);
-       adoptedCats.add(testCat);
     }
 
-    public ArrayList<Cat> retrievedCatList() {
-    return catNames;
+    public void adoptCat(Cat testCat) {
+        catNames.remove(testCat);
+        System.out.println(testCat + " found a new home.");
+    }
+
+    public HashMap<String, Cat> retrievedCatList() {
+    return (HashMap<String, Cat>) catNames.values();
     }
 
 }

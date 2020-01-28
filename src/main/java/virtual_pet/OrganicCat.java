@@ -2,6 +2,7 @@ package virtual_pet;
 
 public class OrganicCat extends Cat{
     private int hunger;
+
     private int health;
     private int litterBox;
     public OrganicCat (String name, int boredom) {
@@ -24,8 +25,19 @@ public class OrganicCat extends Cat{
     public void cleanLitterBox(){
         litterBox -= 10;
     }
-
     public void receiveFood() {
+    }
+
+    public int getHunger() {
+        return hunger;
+    }
+
+    public int getHealth() {
+        return health;
+    }
+
+    public int getLitterBox() {
+        return litterBox;
     }
 
     @Override

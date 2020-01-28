@@ -16,6 +16,7 @@ public class Application {
                 RoboCat roboCat1 = new RoboCat("Stuart", 10);
                 RoboCat roboCat2 = new RoboCat("Ernest", 10);
 
+
                 CatShelter shelter = new CatShelter();
                 shelter.addCat(orgCat1);
                 shelter.addCat(orgCat2);
@@ -23,19 +24,16 @@ public class Application {
                 shelter.addCat(roboCat1);
                 shelter.addCat(roboCat2);
 
-                for (int i = 0; i < shelter.getCatNames().size(); i++) {
-                    Cat someCatFromTheList = shelter.getCatNames().get(i);
+                for (String name: shelter.getCatNames().keySet()) {
+                    Cat someCatFromTheList = shelter.getCatNames().get(name);
                     System.out.println(someCatFromTheList);
                 }
-//                System.out.println("Which cat would you like to adopt?");
-//                String userInputAdopt = input.nextLine();
-//
-//                shelter.adoptCat(userInputAdopt);
-//                CatShelter adoptedCats = new CatShelter();
-//                System.out.println("Here is a list of cats you've adopted:");
-//                for(Cat c: adoptedCats.getAdoptedCats()){
-//                    System.out.println(c);
-//                }
+
+                System.out.println("Which cat would you like to adopt?");
+                String userInputAdopt = input.nextLine();
+
+
+
             }else {
             System.out.println("Ok. Goodbye.");
                 }
