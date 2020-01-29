@@ -46,12 +46,12 @@ void setUp(){
 //   HashMap<String, Cat> retrievedCatList = underTest.retrievedCatList();
 //   assertTrue(retrievedCatList.remove(testCat));
 
-    @Test
-    public void shouldAdoptCat() {
-        underTest.adoptCat(testCat);
-        HashMap<String, Cat> answer = underTest.getCatNames();
-        assertEquals(answer.values().size(), 1);
-    }
+//    @Test
+//    public void shouldAdoptCat() {
+//        underTest.adoptCat(testCat);
+//        HashMap<String, Cat> answer = underTest.getCatNames();
+//        assertEquals(answer.values().size(), 1);
+//    }
 //    private void assertTrue(Object getFeedStatus) {
 //    }
 
