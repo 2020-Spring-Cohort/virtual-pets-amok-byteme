@@ -22,7 +22,3 @@ As you play in the game time will tick by.  Keep an eye on the cats attributes t
 At any time a player can exit the game simply by typing "exit".
 
 We here at the Table 5 Cat Sanctuary sincerely appreciate your valuable time.  And remember as Bob Barker would always say: "This is Table 5 reminding you to help control the pet population- have your pets spayed or neutered!"
-
-
-
-
