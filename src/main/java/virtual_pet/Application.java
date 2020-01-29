@@ -23,10 +23,7 @@ public class Application {
                 shelter.addCat(roboCat1);
                 shelter.addCat(roboCat2);
 
-                for (String name : shelter.getCatNames().keySet()) {
-                    Cat someCatFromTheList = shelter.getCatNames().get(name);
-                    System.out.println(someCatFromTheList);
-                }
+            printCatStatus(shelter);
             while (x == 1) {
                 System.out.println("Would you like to interact with all cats or a single cat?[A/S]");
                 String userInput2 = input.nextLine();
@@ -36,47 +33,26 @@ public class Application {
                     String userInputAction = input.nextLine();
                     if (userInputAction.equals("feed all cats")) {
                         shelter.feedAllCats();
-                        for (String name : shelter.getCatNames().keySet()) {
-                            Cat someCatFromTheList = shelter.getCatNames().get(name);
-                            System.out.println(someCatFromTheList);
-                        }
+                        printCatStatus(shelter);
                     } else if (userInputAction.equals("play with all cats")) {
                         shelter.playWithAllCats();
-                        for (String name : shelter.getCatNames().keySet()) {
-                            Cat someCatFromTheList = shelter.getCatNames().get(name);
-                            System.out.println(someCatFromTheList);
-                        }
+                        printCatStatus(shelter);
                     } else if (userInputAction.equals("take cats to vet")) {
                         shelter.takeAllCatsToVet();
-                        for (String name : shelter.getCatNames().keySet()) {
-                            Cat someCatFromTheList = shelter.getCatNames().get(name);
-                            System.out.println(someCatFromTheList);
-                        }
+                        printCatStatus(shelter);
                     } else if (userInputAction.equals("clean litter boxes")) {
                         shelter.cleanAllLitterBoxes();
-                        for (String name : shelter.getCatNames().keySet()) {
-                            Cat someCatFromTheList = shelter.getCatNames().get(name);
-                            System.out.println(someCatFromTheList);
-                        }
+                        printCatStatus(shelter);
                     } else if (userInputAction.equals("repair all robotic cats")) {
                         shelter.repairAllRoboCats();
-                        for (String name : shelter.getCatNames().keySet()) {
-                            Cat someCatFromTheList = shelter.getCatNames().get(name);
-                            System.out.println(someCatFromTheList);
-                        }
+                        printCatStatus(shelter);
                     } else if (userInputAction.equals("recharge all robotic cats")) {
                         shelter.rechargeAllRoboCats();
-                        for (String name : shelter.getCatNames().keySet()) {
-                            Cat someCatFromTheList = shelter.getCatNames().get(name);
-                            System.out.println(someCatFromTheList);
-                        }
+                        printCatStatus(shelter);
                     } else if (userInputAction.equals("shoot all laser beams")) {
                         shelter.shootAllLaserBeams();
                     }
-                    for (String name : shelter.getCatNames().keySet()) {
-                        Cat someCatFromTheList = shelter.getCatNames().get(name);
-                        someCatFromTheList.tick();
-                    }
+                    tickAllCats(shelter);
                 }
 
                 else if (userInput2.equals("S")) {
@@ -100,15 +76,9 @@ public class Application {
                         } else if (userInputAction.equals("adopt this cat")) {
                             shelter.adoptCat(userInputCat);
                             System.out.println("Congratulations on adopting your cat. Here is a list of cats still in the shelter:");
-                            for (String name : shelter.getCatNames().keySet()) {
-                                Cat someCatFromTheList = shelter.getCatNames().get(name);
-                                System.out.println(someCatFromTheList);
-                            }
+                            printCatStatus(shelter);
                         }
-                        for (String name : shelter.getCatNames().keySet()) {
-                            Cat someCatFromTheList = shelter.getCatNames().get(name);
-                            someCatFromTheList.tick();
-                        }
+                        tickAllCats(shelter);
                     }
                     if (userInputCat.equals("Noah")) {
                         System.out.println("What action would you like to take? [play, feed, take cat to vet, clean litter box, adopt this cat]");
@@ -128,15 +98,9 @@ public class Application {
                         } else if (userInputAction.equals("adopt this cat")) {
                             shelter.adoptCat(userInputCat);
                             System.out.println("Congratulations on adopting your cat. Here is a list of cats still in the shelter:");
-                            for (String name : shelter.getCatNames().keySet()) {
-                                Cat someCatFromTheList = shelter.getCatNames().get(name);
-                                System.out.println(someCatFromTheList);
-                            }
+                            printCatStatus(shelter);
                         }
-                        for (String name : shelter.getCatNames().keySet()) {
-                            Cat someCatFromTheList = shelter.getCatNames().get(name);
-                            someCatFromTheList.tick();
-                        }
+                        tickAllCats(shelter);
                     }
                     if (userInputCat.equals("Brian")) {
                         System.out.println("What action would you like to take? [play, feed, take cat to vet, clean litter box, adopt this cat]");
@@ -156,15 +120,9 @@ public class Application {
                         } else if (userInputAction.equals("adopt this cat")) {
                             shelter.adoptCat(userInputCat);
                             System.out.println("Congratulations on adopting your cat. Here is a list of cats still in the shelter:");
-                            for (String name : shelter.getCatNames().keySet()) {
-                                Cat someCatFromTheList = shelter.getCatNames().get(name);
-                                System.out.println(someCatFromTheList);
-                            }
+                            printCatStatus(shelter);
                         }
-                        for (String name : shelter.getCatNames().keySet()) {
-                            Cat someCatFromTheList = shelter.getCatNames().get(name);
-                            someCatFromTheList.tick();
-                        }
+                        tickAllCats(shelter);
                     }
                     if (userInputCat.equals("Stuart")) {
                         System.out.println("What action would you like to take? [play, repair, recharge, laser beam, adopt this cat]");
@@ -183,15 +141,9 @@ public class Application {
                         } else if (userInputAction.equals("adopt this cat")) {
                             shelter.adoptCat(userInputCat);
                             System.out.println("Congratulations on adopting your cat. Here is a list of cats still in the shelter:");
-                            for (String name : shelter.getCatNames().keySet()) {
-                                Cat someCatFromTheList = shelter.getCatNames().get(name);
-                                System.out.println(someCatFromTheList);
-                            }
+                            printCatStatus(shelter);
                         }
-                        for (String name : shelter.getCatNames().keySet()) {
-                            Cat someCatFromTheList = shelter.getCatNames().get(name);
-                            someCatFromTheList.tick();
-                        }
+                        tickAllCats(shelter);
                     }
                     if (userInputCat.equals("Ernest")) {
                         System.out.println("What action would you like to take? [play, repair, recharge, laser beam, adopt this cat]");
@@ -210,14 +162,8 @@ public class Application {
                         } else if (userInputAction.equals("adopt this cat")) {
                             shelter.adoptCat(userInputCat);
                             System.out.println("Congratulations on adopting your cat. Here is a list of cats still in the shelter:");
-                            for (String name : shelter.getCatNames().keySet()) {
-                                Cat someCatFromTheList = shelter.getCatNames().get(name);
-                                System.out.println(someCatFromTheList);
-                            }
-                            for (String name : shelter.getCatNames().keySet()) {
-                                Cat someCatFromTheList = shelter.getCatNames().get(name);
-                                someCatFromTheList.tick();
-                            }
+                            printCatStatus(shelter);
+                            tickAllCats(shelter);
                         }else if(userInputAction.equals("exit")){
                             System.out.println("Thanks for visiting. Please come back!");
                             break;
@@ -231,7 +177,21 @@ public class Application {
                 System.out.println("Ok. Goodbye.");
             }
         }
+
+    private static void tickAllCats(CatShelter shelter) {
+        for (String name : shelter.getCatNames().keySet()) {
+            Cat someCatFromTheList = shelter.getCatNames().get(name);
+            someCatFromTheList.tick();
+        }
     }
+
+    private static void printCatStatus(CatShelter shelter) {
+        for (String name : shelter.getCatNames().keySet()) {
+            Cat someCatFromTheList = shelter.getCatNames().get(name);
+            System.out.println(someCatFromTheList);
+        }
+    }
+}
 
 
 
