@@ -73,6 +73,10 @@ public class Application {
                     } else if (userInputAction.equals("shoot all laser beams")) {
                         shelter.shootAllLaserBeams();
                     }
+                    for (String name : shelter.getCatNames().keySet()) {
+                        Cat someCatFromTheList = shelter.getCatNames().get(name);
+                        someCatFromTheList.tick();
+                    }
                 }
 
                 else if (userInput2.equals("S")) {
@@ -101,6 +105,10 @@ public class Application {
                                 System.out.println(someCatFromTheList);
                             }
                         }
+                        for (String name : shelter.getCatNames().keySet()) {
+                            Cat someCatFromTheList = shelter.getCatNames().get(name);
+                            someCatFromTheList.tick();
+                        }
                     }
                     if (userInputCat.equals("Noah")) {
                         System.out.println("What action would you like to take? [play, feed, take cat to vet, clean litter box, adopt this cat]");
@@ -124,6 +132,10 @@ public class Application {
                                 Cat someCatFromTheList = shelter.getCatNames().get(name);
                                 System.out.println(someCatFromTheList);
                             }
+                        }
+                        for (String name : shelter.getCatNames().keySet()) {
+                            Cat someCatFromTheList = shelter.getCatNames().get(name);
+                            someCatFromTheList.tick();
                         }
                     }
                     if (userInputCat.equals("Brian")) {
@@ -149,6 +161,10 @@ public class Application {
                                 System.out.println(someCatFromTheList);
                             }
                         }
+                        for (String name : shelter.getCatNames().keySet()) {
+                            Cat someCatFromTheList = shelter.getCatNames().get(name);
+                            someCatFromTheList.tick();
+                        }
                     }
                     if (userInputCat.equals("Stuart")) {
                         System.out.println("What action would you like to take? [play, repair, recharge, laser beam, adopt this cat]");
@@ -172,6 +188,10 @@ public class Application {
                                 System.out.println(someCatFromTheList);
                             }
                         }
+                        for (String name : shelter.getCatNames().keySet()) {
+                            Cat someCatFromTheList = shelter.getCatNames().get(name);
+                            someCatFromTheList.tick();
+                        }
                     }
                     if (userInputCat.equals("Ernest")) {
                         System.out.println("What action would you like to take? [play, repair, recharge, laser beam, adopt this cat]");
@@ -193,6 +213,10 @@ public class Application {
                             for (String name : shelter.getCatNames().keySet()) {
                                 Cat someCatFromTheList = shelter.getCatNames().get(name);
                                 System.out.println(someCatFromTheList);
+                            }
+                            for (String name : shelter.getCatNames().keySet()) {
+                                Cat someCatFromTheList = shelter.getCatNames().get(name);
+                                someCatFromTheList.tick();
                             }
                         }else if(userInputAction.equals("exit")){
                             System.out.println("Thanks for visiting. Please come back!");
