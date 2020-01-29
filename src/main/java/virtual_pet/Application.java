@@ -58,125 +58,67 @@ public class Application {
                 else if (userInput2.equals("S")) {
                     System.out.println("Which cat would you like to interact with?");
                     String userInputCat = input.nextLine();
-                    if (userInputCat.equals("Ben")) {
-                        System.out.println("What action would you like to take? [play, feed, take cat to vet, clean litter box, adopt this cat]");
-                        String userInputAction = input.nextLine();
-                        if (userInputAction.equals("feed")) {
-                            orgCat1.feed();
-                            System.out.println(orgCat1);
-                        } else if (userInputAction.equals("play")) {
-                            orgCat1.play();
-                            System.out.println(orgCat1);
-                        } else if (userInputAction.equals("take cat to vet")) {
-                            orgCat1.vetVisit();
-                            System.out.println(orgCat1);
-                        } else if (userInputAction.equals("clean litter box")) {
-                            orgCat1.cleanLitterBox();
-                            System.out.println(orgCat1);
-                        } else if (userInputAction.equals("adopt this cat")) {
-                            shelter.adoptCat(userInputCat);
-                            System.out.println("Congratulations on adopting your cat. Here is a list of cats still in the shelter:");
-                            printCatStatus(shelter);
-                        }
-                        tickAllCats(shelter);
-                    }
-                    if (userInputCat.equals("Noah")) {
-                        System.out.println("What action would you like to take? [play, feed, take cat to vet, clean litter box, adopt this cat]");
-                        String userInputAction = input.nextLine();
-                        if (userInputAction.equals("feed")) {
-                            orgCat2.feed();
-                            System.out.println(orgCat2);
-                        } else if (userInputAction.equals("play")) {
-                            orgCat2.play();
-                            System.out.println(orgCat2);
-                        } else if (userInputAction.equals("take cat to vet")) {
-                            orgCat2.vetVisit();
-                            System.out.println(orgCat2);
-                        } else if (userInputAction.equals("clean litter box")) {
-                            orgCat2.cleanLitterBox();
-                            System.out.println(orgCat2);
-                        } else if (userInputAction.equals("adopt this cat")) {
-                            shelter.adoptCat(userInputCat);
-                            System.out.println("Congratulations on adopting your cat. Here is a list of cats still in the shelter:");
-                            printCatStatus(shelter);
-                        }
-                        tickAllCats(shelter);
-                    }
-                    if (userInputCat.equals("Brian")) {
-                        System.out.println("What action would you like to take? [play, feed, take cat to vet, clean litter box, adopt this cat]");
-                        String userInputAction = input.nextLine();
-                        if (userInputAction.equals("feed")) {
-                            orgCat3.feed();
-                            System.out.println(orgCat3);
-                        } else if (userInputAction.equals("play")) {
-                            orgCat3.play();
-                            System.out.println(orgCat3);
-                        } else if (userInputAction.equals("take cat to vet")) {
-                            orgCat3.vetVisit();
-                            System.out.println(orgCat3);
-                        } else if (userInputAction.equals("clean litter box")) {
-                            orgCat3.cleanLitterBox();
-                            System.out.println(orgCat3);
-                        } else if (userInputAction.equals("adopt this cat")) {
-                            shelter.adoptCat(userInputCat);
-                            System.out.println("Congratulations on adopting your cat. Here is a list of cats still in the shelter:");
-                            printCatStatus(shelter);
-                        }
-                        tickAllCats(shelter);
-                    }
-                    if (userInputCat.equals("Stuart")) {
-                        System.out.println("What action would you like to take? [play, repair, recharge, laser beam, adopt this cat]");
-                        String userInputAction = input.nextLine();
-                        if (userInputAction.equals("play")) {
-                            roboCat1.play();
-                            System.out.println(roboCat1);
-                        } else if (userInputAction.equals("repair")) {
-                            roboCat1.repair();
-                            System.out.println(roboCat1);
-                        } else if (userInputAction.equals("recharge")) {
-                            roboCat1.recharge();
-                            System.out.println(roboCat1);
-                        } else if (userInputAction.equals("laser beam")) {
-                            roboCat1.laserBeam();
-                        } else if (userInputAction.equals("adopt this cat")) {
-                            shelter.adoptCat(userInputCat);
-                            System.out.println("Congratulations on adopting your cat. Here is a list of cats still in the shelter:");
-                            printCatStatus(shelter);
-                        }
-                        tickAllCats(shelter);
-                    }
-                    if (userInputCat.equals("Ernest")) {
-                        System.out.println("What action would you like to take? [play, repair, recharge, laser beam, adopt this cat]");
-                        String userInputAction = input.nextLine();
-                        if (userInputAction.equals("play")) {
-                            roboCat2.play();
-                            System.out.println(roboCat2);
-                        } else if (userInputAction.equals("repair")) {
-                            roboCat2.repair();
-                            System.out.println(roboCat2);
-                        } else if (userInputAction.equals("recharge")) {
-                            roboCat2.recharge();
-                            System.out.println(roboCat1);
-                        } else if (userInputAction.equals("laser beam")) {
-                            roboCat2.laserBeam();
-                        } else if (userInputAction.equals("adopt this cat")) {
-                            shelter.adoptCat(userInputCat);
-                            System.out.println("Congratulations on adopting your cat. Here is a list of cats still in the shelter:");
-                            printCatStatus(shelter);
-                            tickAllCats(shelter);
-                        }else if(userInputAction.equals("exit")){
-                            System.out.println("Thanks for visiting. Please come back!");
-                            break;
-                            }
-                        }
+                     interactOneCat(userInputCat, shelter);
                     }else if(userInput2.equals("exit")){ System.out.println("Thanks for visiting. Please come back!"); break; }
                 }
-
-
             } else{
                 System.out.println("Ok. Goodbye.");
             }
         }
+
+    private static void interactOneCat(String userInputCat, CatShelter shelter) {
+        Scanner input = new Scanner(System.in);
+        Cat aCat = shelter.getCatNames().get(userInputCat);
+        if (aCat instanceof OrganicCat) {
+            System.out.println("What action would you like to take? [play, feed, take cat to vet, clean litter box, adopt this cat]");
+            String userInputAction = input.nextLine();
+            if (userInputAction.equals("feed")) {
+                ((OrganicCat) aCat).feed();
+                System.out.println(aCat);
+            } else if (userInputAction.equals("play")) {
+                aCat.play();
+                System.out.println(aCat);
+            } else if (userInputAction.equals("take cat to vet")) {
+                ((OrganicCat) aCat).vetVisit();
+                System.out.println(aCat);
+            } else if (userInputAction.equals("clean litter box")) {
+                ((OrganicCat) aCat).cleanLitterBox();
+                System.out.println(aCat);
+            } else if (userInputAction.equals("adopt this cat")) {
+                shelter.adoptCat(userInputCat);
+                System.out.println("Congratulations on adopting your cat. Here is a list of cats still in the shelter:");
+                printCatStatus(shelter);
+            }
+            tickAllCats(shelter);
+        } else
+
+                System.out.println("What action would you like to take? [play, repair, recharge, laser beam, adopt this cat]");
+                String userInputAction = input.nextLine();
+                if (userInputAction.equals("play")) {
+                    aCat.play();
+                    System.out.println(aCat);
+                } else if (userInputAction.equals("repair")) {
+                    ((RoboCat) aCat).repair();
+                    System.out.println(aCat);
+                } else if (userInputAction.equals("recharge")) {
+                    ((RoboCat) aCat).recharge();
+                    System.out.println(aCat);
+                } else if (userInputAction.equals("laser beam")) {
+                    ((RoboCat) aCat).laserBeam();
+                } else if (userInputAction.equals("adopt this cat")) {
+                    shelter.adoptCat(userInputCat);
+                    System.out.println("Congratulations on adopting your cat. Here is a list of cats still in the shelter:");
+                    printCatStatus(shelter);
+                    tickAllCats(shelter);
+                }
+
+            }
+
+
+
+
+
+
 
     private static void tickAllCats(CatShelter shelter) {
         for (String name : shelter.getCatNames().keySet()) {

@@ -1,7 +1,9 @@
 package virtual_pet;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.HashMap;
+import java.util.List;
 
 public class CatShelter {
 
@@ -81,8 +83,8 @@ private HashMap<String, Cat> catNames = new HashMap<>();
 
 
 
-    public HashMap<String, Cat> retrievedCatList() {
-    return (HashMap<String, Cat>) catNames.values();
+    public Collection<Cat> retrievedCatList() {
+        return catNames.values();
     }
 
 }
