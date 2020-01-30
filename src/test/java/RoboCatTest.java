@@ -6,7 +6,7 @@ public class RoboCatTest {
     @Test
     public void shouldHaveDefaultMaintenance() {
         RoboCat underTest = new RoboCat("Ben", 10);
-        int result = underTest.maintenance();
+        int result = underTest.getMaintenance();
         Assertions.assertEquals(10, result);
     }
 
@@ -21,7 +21,7 @@ public class RoboCatTest {
     public void repairShouldIncreaseMaintenanceByTwo() {
         RoboCat underTest = new RoboCat("Ben", 10);
         underTest.repair();
-        int result = underTest.maintenance();
+        int result = underTest.getMaintenance();
         Assertions.assertEquals(12, result);
     }
 

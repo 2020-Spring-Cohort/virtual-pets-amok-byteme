@@ -1,9 +1,7 @@
 package virtual_pet;
 
-import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
-import java.util.List;
 
 public class CatShelter {
 
@@ -69,15 +67,18 @@ private HashMap<String, Cat> catNames = new HashMap<>();
         }
     }
 
-    public void shootAllLaserBeams(){
+    public String shootAllLaserBeams(){
         for(Cat catToFireBeam : catNames.values()){
             if(catToFireBeam instanceof RoboCat){
                 ((RoboCat) catToFireBeam).laserBeam();
             }
         }
+        return "Zap!";
     }
 
-    public void adoptCat(String name) { catNames.remove(name);}
+    public Collection<Cat> adoptCat(String name) { catNames.remove(name);
+        return catNames.values();
+    }
 
 
 

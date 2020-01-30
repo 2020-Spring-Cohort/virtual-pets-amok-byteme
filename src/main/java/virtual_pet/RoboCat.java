@@ -10,7 +10,7 @@ public class RoboCat extends Cat {
         this.maintenance = 10;
         this.batteryLife = 10;
     }
-    public int maintenance () {return maintenance;}
+    public int getMaintenance () {return maintenance;}
     public int batteryLife () {return batteryLife;}
     public void repair() {maintenance += 2;}
     public void recharge() {batteryLife += 5;}
