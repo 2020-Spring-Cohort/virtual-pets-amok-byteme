@@ -53,13 +53,11 @@ public class Application {
                         shelter.shootAllLaserBeams();
                     }
                     tickAllCats(shelter);
-                }
-
-                else if (userInput2.equals("S")) {
+                } else if (userInput2.equals("S")) {
                     System.out.println("Which cat would you like to interact with?");
                     String userInputCat = input.nextLine();
                      interactOneCat(userInputCat, shelter);
-                    }else if(userInput2.equals("exit")){ System.out.println("Thanks for visiting. Please come back!"); break; }
+                } else if(userInput2.equals("exit")){ System.out.println("Thanks for visiting. Please come back!"); break; }
                 }
             } else{
                 System.out.println("Ok. Goodbye.");
@@ -74,16 +72,17 @@ public class Application {
             String userInputAction = input.nextLine();
             if (userInputAction.equals("feed")) {
                 ((OrganicCat) aCat).feed();
-                System.out.println(aCat);
+                printCatStatus(shelter);
             } else if (userInputAction.equals("play")) {
                 aCat.play();
-                System.out.println(aCat);
+                printCatStatus(shelter);
+
             } else if (userInputAction.equals("take cat to vet")) {
                 ((OrganicCat) aCat).vetVisit();
-                System.out.println(aCat);
+                printCatStatus(shelter);
             } else if (userInputAction.equals("clean litter box")) {
                 ((OrganicCat) aCat).cleanLitterBox();
-                System.out.println(aCat);
+                printCatStatus(shelter);
             } else if (userInputAction.equals("adopt this cat")) {
                 shelter.adoptCat(userInputCat);
                 System.out.println("Congratulations on adopting your cat. Here is a list of cats still in the shelter:");
@@ -96,22 +95,21 @@ public class Application {
             String userInputAction = input.nextLine();
             if (userInputAction.equals("play")) {
                 aCat.play();
-                System.out.println(aCat);
+                printCatStatus(shelter);
             } else if (userInputAction.equals("repair")) {
                 ((RoboCat) aCat).repair();
-                System.out.println(aCat);
+                printCatStatus(shelter);
             } else if (userInputAction.equals("recharge")) {
                 ((RoboCat) aCat).recharge();
-                System.out.println(aCat);
+                printCatStatus(shelter);
             } else if (userInputAction.equals("laser beam")) {
                 ((RoboCat) aCat).laserBeam();
             } else if (userInputAction.equals("adopt this cat")) {
                 shelter.adoptCat(userInputCat);
                 System.out.println("Congratulations on adopting your cat. Here is a list of cats still in the shelter:");
                 printCatStatus(shelter);
-                tickAllCats(shelter);
             }
-
+            tickAllCats(shelter);
         }
     }
 
