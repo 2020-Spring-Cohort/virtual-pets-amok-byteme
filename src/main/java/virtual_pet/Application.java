@@ -9,21 +9,7 @@ public class Application {
         Scanner input = new Scanner(System.in);
         String userInput1 = input.nextLine();
         if (userInput1.equals("Y")) {
-                System.out.println("Here is a list of our cats:");
-                OrganicCat orgCat1 = new OrganicCat("Ben", 10);
-                OrganicCat orgCat2 = new OrganicCat("Noah", 10);
-                OrganicCat orgCat3 = new OrganicCat("Brian", 10);
-                RoboCat roboCat1 = new RoboCat("Stuart", 10);
-                RoboCat roboCat2 = new RoboCat("Ernest", 10);
-
-                CatShelter shelter = new CatShelter();
-                shelter.addCat(orgCat1);
-                shelter.addCat(orgCat2);
-                shelter.addCat(orgCat3);
-                shelter.addCat(roboCat1);
-                shelter.addCat(roboCat2);
-
-            printCatStatus(shelter);
+            CatShelter shelter = getCatShelter();
             while (x == 1) {
                 System.out.println("Would you like to interact with all cats or a single cat?[A/S]");
                 String userInput2 = input.nextLine();
@@ -43,6 +29,25 @@ public class Application {
                 System.out.println("Ok. Goodbye.");
             }
         }
+
+    private static CatShelter getCatShelter() {
+        System.out.println("Here is a list of our cats:");
+        OrganicCat orgCat1 = new OrganicCat("Ben", 10);
+        OrganicCat orgCat2 = new OrganicCat("Noah", 10);
+        OrganicCat orgCat3 = new OrganicCat("Brian", 10);
+        RoboCat roboCat1 = new RoboCat("Stuart", 10);
+        RoboCat roboCat2 = new RoboCat("Ernest", 10);
+
+        CatShelter shelter = new CatShelter();
+        shelter.addCat(orgCat1);
+        shelter.addCat(orgCat2);
+        shelter.addCat(orgCat3);
+        shelter.addCat(roboCat1);
+        shelter.addCat(roboCat2);
+
+        printCatStatus(shelter);
+        return shelter;
+    }
 
     private static void interactAllCats(Scanner input, CatShelter shelter) {
         System.out.println("What action would you like to take?");
@@ -68,6 +73,7 @@ public class Application {
             printCatStatus(shelter);
         } else if (userInputAction.equals("shoot all laser beams")) {
             shelter.shootAllLaserBeams();
+            printCatStatus(shelter);
         }else if(userInputAction.equals("exit")){
             System.out.println("Thanks for visiting. Please come back!"); System.exit(0); }
         tickAllCats(shelter);
@@ -114,6 +120,7 @@ public class Application {
                 printCatStatus(shelter);
             } else if (userInputAction.equals("laser beam")) {
                 ((RoboCat) aCat).laserBeam();
+                printCatStatus(shelter);
             } else if (userInputAction.equals("adopt this cat")) {
                 shelter.adoptCat(userInputCat);
                 System.out.println("Congratulations on adopting your cat. Here is a list of cats still in the shelter:");

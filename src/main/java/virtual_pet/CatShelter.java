@@ -5,12 +5,7 @@ import java.util.HashMap;
 
 public class CatShelter {
 
-private HashMap<String, Cat> catNames = new HashMap<>();
-
-
-    public CatShelter() {
-
-    }
+    private HashMap<String, Cat> catNames = new HashMap<>();
 
     public void addCat(Cat testCat) {
         catNames.put(testCat.getName(), testCat);
@@ -21,15 +16,16 @@ private HashMap<String, Cat> catNames = new HashMap<>();
         return catNames;
     }
 
-   public void playWithAllCats(){
-        for (Cat catToPlayWith : catNames.values()){
-            catToPlayWith.play();;
+    public void playWithAllCats() {
+        for (Cat catToPlayWith : catNames.values()) {
+            catToPlayWith.play();
+            ;
         }
-   }
+    }
 
     public void feedAllCats() {
         for (Cat catToBeFed : catNames.values()) {
-            if(catToBeFed instanceof OrganicCat){
+            if (catToBeFed instanceof OrganicCat) {
                 ((OrganicCat) catToBeFed).feed();
             }
         }
@@ -37,7 +33,7 @@ private HashMap<String, Cat> catNames = new HashMap<>();
 
     public void takeAllCatsToVet() {
         for (Cat catToBeTakenToVet : catNames.values()) {
-            if(catToBeTakenToVet instanceof OrganicCat){
+            if (catToBeTakenToVet instanceof OrganicCat) {
                 ((OrganicCat) catToBeTakenToVet).vetVisit();
             }
         }
@@ -45,50 +41,44 @@ private HashMap<String, Cat> catNames = new HashMap<>();
 
     public void cleanAllLitterBoxes() {
         for (Cat litterBoxToBeCleaned : catNames.values()) {
-            if(litterBoxToBeCleaned instanceof OrganicCat){
+            if (litterBoxToBeCleaned instanceof OrganicCat) {
                 ((OrganicCat) litterBoxToBeCleaned).cleanLitterBox();
             }
         }
     }
 
-    public void repairAllRoboCats(){
-        for(Cat catToBeRepaired : catNames.values()){
-            if(catToBeRepaired instanceof RoboCat){
+    public void repairAllRoboCats() {
+        for (Cat catToBeRepaired : catNames.values()) {
+            if (catToBeRepaired instanceof RoboCat) {
                 ((RoboCat) catToBeRepaired).repair();
             }
         }
     }
 
-    public void rechargeAllRoboCats(){
-        for(Cat catToBeCharged : catNames.values()){
-            if(catToBeCharged instanceof RoboCat){
+    public void rechargeAllRoboCats() {
+        for (Cat catToBeCharged : catNames.values()) {
+            if (catToBeCharged instanceof RoboCat) {
                 ((RoboCat) catToBeCharged).recharge();
             }
         }
     }
 
-    public String shootAllLaserBeams(){
-        for(Cat catToFireBeam : catNames.values()){
-            if(catToFireBeam instanceof RoboCat){
+    public String shootAllLaserBeams() {
+        for (Cat catToFireBeam : catNames.values()) {
+            if (catToFireBeam instanceof RoboCat) {
                 ((RoboCat) catToFireBeam).laserBeam();
             }
         }
         return "Zap!";
     }
 
-    public Collection<Cat> adoptCat(String name) { catNames.remove(name);
+    public Collection<Cat> adoptCat(String name) {
+        catNames.remove(name);
         return catNames.values();
     }
-
-
-
-
-
-    public Collection<Cat> retrievedCatList() {
-        return catNames.values();
-    }
-
 }
+
+
 
 
 

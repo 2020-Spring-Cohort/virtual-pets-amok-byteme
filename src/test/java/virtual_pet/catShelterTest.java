@@ -2,8 +2,6 @@ package virtual_pet;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import java.util.ArrayList;
-import java.util.Collection;
 import java.util.HashMap;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -36,7 +34,7 @@ void setUp(){
 @Test
     public void shouldFeedAllCats(){
     underTest.feedAllCats();
-    int hunger = testCat.getHunger();
+    int hunger = testCat.hunger();
     assertEquals(8, hunger);
 }
 
@@ -55,7 +53,7 @@ void setUp(){
     @Test
     public void shouldCleanAllLitterBoxes(){
         underTest.cleanAllLitterBoxes();
-        int litterBox = testCat.getLitterBox();
+        int litterBox = testCat.litterBox();
         assertEquals(0, litterBox);
     }
     @Test

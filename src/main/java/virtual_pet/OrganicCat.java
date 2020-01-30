@@ -25,20 +25,6 @@ public class OrganicCat extends Cat{
     public void cleanLitterBox(){
         litterBox -= 10;
     }
-    public void receiveFood() {
-    }
-
-    public int getHunger() {
-        return hunger;
-    }
-
-    public int getHealth() {
-        return health;
-    }
-
-    public int getLitterBox() {
-        return litterBox;
-    }
 
     @Override
     public String toString() {
