@@ -90,29 +90,30 @@ public class Application {
                 printCatStatus(shelter);
             }
             tickAllCats(shelter);
-        } else
+        } else {
 
-                System.out.println("What action would you like to take? [play, repair, recharge, laser beam, adopt this cat]");
-                String userInputAction = input.nextLine();
-                if (userInputAction.equals("play")) {
-                    aCat.play();
-                    System.out.println(aCat);
-                } else if (userInputAction.equals("repair")) {
-                    ((RoboCat) aCat).repair();
-                    System.out.println(aCat);
-                } else if (userInputAction.equals("recharge")) {
-                    ((RoboCat) aCat).recharge();
-                    System.out.println(aCat);
-                } else if (userInputAction.equals("laser beam")) {
-                    ((RoboCat) aCat).laserBeam();
-                } else if (userInputAction.equals("adopt this cat")) {
-                    shelter.adoptCat(userInputCat);
-                    System.out.println("Congratulations on adopting your cat. Here is a list of cats still in the shelter:");
-                    printCatStatus(shelter);
-                    tickAllCats(shelter);
-                }
-
+            System.out.println("What action would you like to take? [play, repair, recharge, laser beam, adopt this cat]");
+            String userInputAction = input.nextLine();
+            if (userInputAction.equals("play")) {
+                aCat.play();
+                System.out.println(aCat);
+            } else if (userInputAction.equals("repair")) {
+                ((RoboCat) aCat).repair();
+                System.out.println(aCat);
+            } else if (userInputAction.equals("recharge")) {
+                ((RoboCat) aCat).recharge();
+                System.out.println(aCat);
+            } else if (userInputAction.equals("laser beam")) {
+                ((RoboCat) aCat).laserBeam();
+            } else if (userInputAction.equals("adopt this cat")) {
+                shelter.adoptCat(userInputCat);
+                System.out.println("Congratulations on adopting your cat. Here is a list of cats still in the shelter:");
+                printCatStatus(shelter);
+                tickAllCats(shelter);
             }
+
+        }
+    }
 
 
 
